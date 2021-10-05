@@ -1,0 +1,20 @@
+{
+  "port": 8443,
+  "host": "127.0.0.1",
+  "secure": true,
+  "tls": {
+    "pfx": "keystore.p12",
+    "passphrase": "password",
+    "alias": "selfsigned"
+  },
+  "servers": {
+    "/api/*": {
+      "name": "server1",
+      "target": "http://localhost:8090"
+    },
+    "/apix/*": {
+      "name": "server2",
+      "target": "http://localhost:8080"
+    }
+  }
+}
